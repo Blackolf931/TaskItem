@@ -1,0 +1,24 @@
+@TaskApi_HostAddress = http://localhost:5217
+
+POST {{TaskApi_HostAddress}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Buy milk",
+  "priority": "High"
+}
+
+###
+
+GET {{TaskApi_HostAddress}}/tasks
+Accept: application/json
+
+###
+
+PUT {{TaskApi_HostAddress}}/tasks/{{taskId}}/complete
+
+###
+
+DELETE {{TaskApi_HostAddress}}/tasks/{{taskId}}
+
+###
